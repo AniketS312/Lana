@@ -1,0 +1,87 @@
+// Nav bar
+.navbar {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+
+  .fixed-border {
+    display: flex;
+    height: 100vh;
+    margin: 0 5%;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    div 
+    {
+      padding: 2% 5%;
+      width: 50%;
+      align-self: flex-start;
+    }
+    .logo {
+      filter: brightness(0) invert(1);
+      flex: 1;  
+
+
+    }
+    .menu {
+      flex: 3;
+        ul {
+          list-style-type: none;
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-evenly;
+
+          li {
+            width: 100%;
+           text-align: center;
+            
+          a {
+            text-decoration: none;
+            color: white;
+            font-family: var(--secondary-font);   
+            }
+            .menu-btn {
+              background-color: var(--menu-button);
+              padding: .7rem 1.2rem;
+              border-radius: 7px;
+              cursor: pointer;
+            }
+
+          }
+        }
+
+    }
+  }
+  
+}
+  // End of navbar
+// Fixed Border
+// End of Fixed Border
+
+// Section 1
+.section-1 {
+  background-image: url("./image/professional\ laptop\ setup.jpg");
+  
+  .button-div { 
+    margin-top: 1rem;
+
+    button {
+      cursor: pointer;
+    }
+  }
+}
+// End of section 1
+
+// Section 2
+.section-2 {
+  background-image: url(./image/Fjord.jpg) ;
+}
+
+// End of section 2
+// Section 3
+.section-3 {
+  background-image: url("./image/Couple_Image.jpg");
+  margin: 0;
+}
+// End of section 3
