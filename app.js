@@ -1,9 +1,8 @@
 new fullpage('#fullpage', {
 	//options here
-  anchors: ['section-1', 'section-2', 'section-3'],
+	anchors: ['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6'],
 	autoScrolling:true,
-	scrollHorizontally: true
+	scrollHorizontally: true,
+	menu: '.nav',
+  scrollingSpeed: 1000
 });
-
-//methods
-fullpage_api.setAllowScrolling(false);

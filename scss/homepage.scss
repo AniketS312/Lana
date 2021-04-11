@@ -3,6 +3,8 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
+  z-index: 5;
+  pointer-events: none;
 
   .fixed-border {
     display: flex;
@@ -12,76 +14,265 @@
     align-items: flex-start;
     border-left: 1px solid white;
     border-right: 1px solid white;
-    div 
-    {
+    div {
       padding: 2% 5%;
       width: 50%;
       align-self: flex-start;
     }
     .logo {
       filter: brightness(0) invert(1);
-      flex: 1;  
-
-
+      flex: 1;
     }
     .menu {
       flex: 3;
-        ul {
-          list-style-type: none;
-          display: flex;
-          align-items: flex-start;
-          justify-content: space-evenly;
+      pointer-events: auto;
+      ul {
+        list-style-type: none;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
 
-          li {
-            width: 100%;
-           text-align: center;
-            
+        li {
+          width: 100%;
+          text-align: center;
+
           a {
             text-decoration: none;
             color: white;
-            font-family: var(--secondary-font);   
-            }
-            .menu-btn {
-              background-color: var(--menu-button);
-              padding: .7rem 1.2rem;
-              border-radius: 7px;
-              cursor: pointer;
-            }
-
+            font-family: var(--secondary-font);
+          }
+          .menu-btn {
+            background-color: var(--menu-button);
+            padding: 0.7rem 1.2rem;
+            border-radius: 7px;
+            
           }
         }
-
+      }
     }
   }
-  
 }
-  // End of navbar
+// End of navbar
 // Fixed Border
 // End of Fixed Border
 
 // Section 1
 .section-1 {
   background-image: url("./image/professional\ laptop\ setup.jpg");
-  
-  .button-div { 
-    margin-top: 1rem;
 
-    button {
-      cursor: pointer;
-    }
-  }
+  .button-div {
+    margin-top: 1rem;
+    z-index: 50;
+  } 
 }
 // End of section 1
 
 // Section 2
 .section-2 {
-  background-image: url(./image/Fjord.jpg) ;
+  background-image: url("./image/Fjord.jpg");
 }
 
 // End of section 2
 // Section 3
 .section-3 {
   background-image: url("./image/Couple_Image.jpg");
-  margin: 0;
+
+  .what-we-do {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+
+    .left-area {
+      flex: 1;
+      color: white;
+    }
+
+    .right-area {
+      flex: 1;
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+
+        .md-18 {
+          font-size: 50px;
+        }
+
+        .md-light {
+          color: rgba(255, 255, 255, 1);
+        }
+
+        p {
+          color: white;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
 }
 // End of section 3
+// Section 4
+.section-4 {
+  background-image: url("./image/modern_building.jpg");
+
+  .grid-section-4 {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template:
+      "title-grid none"
+      "content-grid-1 content-grid-2"
+      "content-grid-3 content-grid-4";
+
+    h2 {
+      font-size: 1.8rem;
+      font-family: var(--main-font);
+      font-weight: 200;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-family: var(--main-font);
+      font-weight: 200;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 200;
+      line-height: 1.3;
+      font-weight: 500;
+    }
+
+    .title-grid {
+      grid-area: title-grid;
+    }
+    .content-grid-1 {
+      grid-area: content-grid-1;
+    }
+    .content-grid-2 {
+      grid-area: content-grid-2;
+    }
+    .content-grid-3 {
+      grid-area: content-grid-3;
+    }
+    .content-grid-4 {
+      grid-area: content-grid-4;
+    }
+  }
+}
+// End of Section 4
+// Section 5
+.section-5 {
+  background-image: url("./image/Counds\ on\ Mountain.jpg");
+}
+.slideshow {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+
+  .section-5-text  {
+    padding-right: 50%;
+    
+  }
+ }
+// End of Section 5
+// Section 6
+.section-6 {
+  background-image: url("./image/walking_alone-mountains.jpg");
+  color: white;
+  .contact {
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    .contact-information {
+
+      .contact-grid {
+        padding-right: 20%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "phone location"
+        "email none"
+        ;
+      }
+    }
+
+  div {
+    flex: 1;
+    align-items: stretch;
+  }
+  .contact-form {
+    z-index: 50;
+    ul {
+      height: 40vh;
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 4fr 1fr;
+      gap: 10px 20px;
+      grid-template-areas: 
+      "name email"
+      "subject subject"
+      "message message"
+      "submit none";
+
+      li {
+        input {
+        height: 50px;
+        width: 100%; 
+        border-radius: 5px;
+        padding: 5px;
+        color: grey;
+      }
+      &:nth-of-type(3) {
+        grid-area: subject;
+      }
+
+      &:nth-of-type(4) {
+        grid-area: message;
+
+        input {
+          height: 100%;
+          text-align: start;
+        }
+       
+      }
+      &:nth-of-type(5) {
+        input {
+          width: 50%;
+          color: white;
+          border: none;
+          font-family: var(--source-font);
+          background-color: rgb(66, 63, 61, 0.7);
+          cursor: pointer;
+        }
+      }
+
+    }
+    }
+  }
+  }
+}
+// End of section 6
