@@ -45,7 +45,6 @@
             background-color: var(--menu-button);
             padding: 0.7rem 1.2rem;
             border-radius: 7px;
-            
           }
         }
       }
@@ -63,7 +62,7 @@
   .button-div {
     margin-top: 1rem;
     z-index: 50;
-  } 
+  }
 }
 // End of section 1
 
@@ -88,6 +87,7 @@
     .left-area {
       flex: 1;
       color: white;
+      padding-right: 3rem;
     }
 
     .right-area {
@@ -97,17 +97,13 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
 
-        .md-18 {
-          font-size: 50px;
-        }
-
         .md-light {
           color: rgba(255, 255, 255, 1);
+          font-size: 50px;
         }
 
         p {
           color: white;
-          font-size: 1.2rem;
         }
       }
     }
@@ -137,19 +133,15 @@
       "content-grid-3 content-grid-4";
 
     h2 {
-      font-size: 1.8rem;
       font-family: var(--main-font);
-      font-weight: 200;
     }
 
     h3 {
-      font-size: 1.5rem;
       font-family: var(--main-font);
-      font-weight: 200;
+      font-weight: 300;
     }
 
     p {
-      font-size: 1rem;
       font-weight: 200;
       line-height: 1.3;
       font-weight: 500;
@@ -185,12 +177,31 @@
   color: white;
   justify-content: center;
   align-items: center;
-
-  .section-5-text  {
+  flex-direction: column;
+  .section-5-text {
+    padding-bottom: 4rem;
     padding-right: 50%;
-    
   }
- }
+  .swiper-container {
+    width: 100%;
+    height: 50%;
+    padding-bottom: 2rem;
+    .swiper-slide {
+      display: flex;
+      img {
+        width: 40%;
+      }
+      .slide-text {
+        padding-left: 5%;
+        padding-right: 10%;
+        h3 {
+          font-family: var(--main-font);
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
 // End of Section 5
 // Section 6
 .section-6 {
@@ -206,73 +217,80 @@
     flex-direction: row;
 
     .contact-information {
-
       .contact-grid {
         padding-right: 20%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "phone location"
-        "email none"
-        ;
-      }
-    }
+        grid-template-areas:
+          "phone location"
+          "email none";
+        margin-top: 3rem;
 
-  div {
-    flex: 1;
-    align-items: stretch;
-  }
-  .contact-form {
-    z-index: 50;
-    ul {
-      height: 40vh;
-      list-style-type: none;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 4fr 1fr;
-      gap: 10px 20px;
-      grid-template-areas: 
-      "name email"
-      "subject subject"
-      "message message"
-      "submit none";
-
-      li {
-        input {
-        height: 50px;
-        width: 100%; 
-        border-radius: 5px;
-        padding: 5px;
-        color: grey;
-      }
-      &:nth-of-type(3) {
-        grid-area: subject;
-      }
-
-      &:nth-of-type(4) {
-        grid-area: message;
-
-        input {
-          height: 100%;
-          text-align: start;
+        .material-icons {
+          font-size: 2.3rem;
         }
-       
-      }
-      &:nth-of-type(5) {
-        input {
-          width: 50%;
-          color: white;
-          border: none;
-          font-family: var(--source-font);
-          background-color: rgb(66, 63, 61, 0.7);
-          cursor: pointer;
+        .email {
+          margin-top: 0.5rem;
         }
       }
+    }
 
+    div {
+      flex: 1;
+      align-items: stretch;
     }
+    .contact-form {
+      z-index: 50;
+      &:active {
+        outline: none;
+      }
+      ul {
+        height: 40vh;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 4fr 1fr;
+        gap: 10px 20px;
+        grid-template-areas:
+          "name email"
+          "subject subject"
+          "message message"
+          "submit none";
+
+        li {
+          input {
+            height: 50px;
+            width: 100%;
+            border-radius: 5px;
+            padding: 5px;
+            color: grey;
+          }
+          &:nth-of-type(3) {
+            grid-area: subject;
+          }
+
+          &:nth-of-type(4) {
+            grid-area: message;
+
+            input {
+              height: 100%;
+              text-align: start;
+            }
+          }
+          &:nth-of-type(5) {
+            input {
+              width: 50%;
+              color: white;
+              border: none;
+              font-family: var(--source-font);
+              background-color: rgb(66, 63, 61, 0.7);
+              cursor: pointer;
+            }
+          }
+        }
+      }
     }
-  }
   }
 }
 // End of section 6

@@ -1,0 +1,5 @@
+1. Forms- on unclick make the form change value
+2. Slider added. add arrows and pagnation
+3. Add social media icons and back to top
+4. Fix logo height
+5. On Ipad fix slidehsow

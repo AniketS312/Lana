@@ -1,0 +1,138 @@
+@media only screen and (max-width: 1025px) {
+  p {
+    font-size: 0.8rem;
+  }
+
+  .navbar .fixed-border div {
+    padding: 1rem 0;
+  }
+  .navbar {
+    .logo {
+      padding-top: 1rem;
+    }
+
+    ul {
+      padding-inline-start: 0;
+      font-size: 0.8rem;
+      padding-inline-end: 20px;
+    }
+  }
+
+  .section-4 .grid-section-4 {
+    width: 86%;
+  }
+
+  .section-6 {
+    .contact {
+      .contact-information {
+        padding-right: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  p {
+    font-size: 1rem;
+  }
+
+  .section-2 {
+    .text-area {
+      width: 80%;
+    }
+  }
+  .section-3 {
+    .what-we-do {
+      flex-direction: column;
+      justify-content: center;
+      .left-area {
+        flex: 0;
+        align-self: center;
+        height: 30%;
+        padding-bottom: 5rem;
+      }
+      .right-area {
+        width: 100%;
+        flex: 0;
+
+        .grid {
+          height: 100%;
+          grid-row-gap: 2.5rem;
+          .md-light {
+            font-size: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  .section-4 {
+    .grid-section-4 {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template:
+        "title-grid"
+        "content-grid-1"
+        "content-grid-2"
+        "content-grid-3"
+        "content-grid-4";
+      row-gap: 0;
+      h3 {
+        margin-block-start: 0.3em;
+        margin-block-end: 0.2em;
+      }
+      p {
+        margin-block-start: 0.4;
+        margin-block-end: 0;
+      }
+    }
+  }
+  .section-5 {
+    .section-5-text {
+      padding-right: 0;
+      padding-bottom: 1rem;
+    }
+
+    .swiper-slide {
+      flex-direction: column;
+
+      img {
+        height: 500px;
+      }
+
+      .slide-text {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .section-6 {
+    .contact {
+      flex-direction: column;
+      .contact-information {
+        padding-top: 2rem;
+        height: 30%;
+        .contact-grid {
+          padding-right: 0;
+          display: flex;
+          .location {
+            padding-right: 2rem;
+          }
+
+          .email {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    .contact-form {
+      height: 60%;
+      width: 100%;
+      align-self: flex-start;
+
+      ul {
+        padding-inline-start: 0;
+      }
+    }
+  }
+}

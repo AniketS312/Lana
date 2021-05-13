@@ -33,9 +33,11 @@ h2 {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
-  font-weight: 700;
+  font-weight: 800;
 }
-
+h3 {
+  font-size: 1.5rem;
+}
 p {
   font-family: var(--secondary-font);
   letter-spacing: 2px;
@@ -100,6 +102,11 @@ button {
 p {
   font-family: var(--secondary-font);
   font-weight: 500;
+  font-size: 1rem;
 }
 
 // End of common Secton
+
+.border-none {
+  border: none;
+}
