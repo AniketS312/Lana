@@ -47,6 +47,89 @@
       </div>
     </header>
     <!-- End of Fixed menu -->
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+      <div class="fixed-border nav">
+        <div class="logo">
+          <img src="./image/lana.png" alt="logo" />
+        </div>
+        <div class="menu">
+          <svg
+            id="open-menu"
+            width="50"
+            height="50"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            data-reactroot=""
+          >
+            <path
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="1"
+              stroke="#ffffff"
+              d="M3 18H21"
+            ></path>
+            <path
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="1"
+              stroke="#ffffff"
+              d="M3 12H21"
+            ></path>
+            <path
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="1"
+              stroke="#ffffff"
+              d="M3 6H21"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="menu-items" id="mobile-menu">
+      <ul class="list">
+        <li class="item" id="item"><a href="#section-1">Home</a></li>
+        <li class="item" id="item"><a href="#section-2">Our Misson</a></li>
+        <li class="item" id="item"><a href="#section-3">What We Do</a></li>
+        <li class="item" id="item"><a href="#section-4">Our Solutions</a></li>
+        <li class="item" id="item"><a href="#section-5">Our Work</a></li>
+        <li class="item" id="item">
+          <a href="#section-6" class="btn menu-btn">Contact Us</a>
+        </li>
+        <svg
+          id="item"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          data-reactroot=""
+        >
+          <path
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="1"
+            stroke="#221b38"
+            d="M2 2L22 22"
+          ></path>
+          <path
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="1"
+            stroke="#221b38"
+            d="M22 2L2 22"
+          ></path>
+        </svg>
+      </ul>
+    </div>
+    <!-- End of Mobile Menu -->
     <div class="container fullpage" id="fullpage">
       <!-- Section 1 -->
       <section class="section section-1 lazy">
@@ -134,10 +217,10 @@
         </div>
       </section>
       <!-- End of Section 3 -->
-      <!-- Section 4 -->
-      <section class="section section-4 lazy">
+      <!-- Section 4 - Main -->
+      <section class="section section-4 lazy hide-mobile">
         <div class="overlay">
-          <div class="grid-section-4">
+          <div class="grid-section-4 mobile-hide">
             <div class="title-grid">
               <h2>
                 A Complete Marketing Solution
@@ -193,6 +276,17 @@
                 pellentesque nec id sem.
               </p>
             </div>
+          </div>
+          <div class="title-grid mobile-show">
+            <h2>
+              A Complete Marketing Solution
+              <p>
+                Mauris ut sem elementum, tristique velit sed, volutpat mauris.
+                Ut interdum nibh sit amet imperdiet condimentum. Nulla sed
+                tellus placerat, vehicula risus ac, sollicitudin quam. Quisque
+                pharetra porta libero, a sagittis nisl tristique non.
+              </p>
+            </h2>
           </div>
         </div>
       </section>
@@ -329,7 +423,7 @@
                       type="text"
                       name="message"
                       id="message"
-                      value="Let us know yout thoughts!"
+                      value="Let us know your thoughts!"
                       row="10"
                     />
                   </li>

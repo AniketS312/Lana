@@ -3,3 +3,4 @@
 3. Add social media icons and back to top
 4. Fix logo height
 5. On Ipad fix slidehsow
+6. Make inputs into text area

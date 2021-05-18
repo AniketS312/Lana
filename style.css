@@ -151,6 +151,17 @@ p {
   border-radius: 7px;
 }
 
+.mobile-menu {
+  position: fixed;
+  top: -100%;
+}
+
+.menu-items {
+  position: fixed;
+  top: -100%;
+  transition: top 0.5s;
+}
+
 .section-1 {
   background-image: url("./image/professional laptop setup.jpg");
 }
@@ -268,7 +279,7 @@ p {
   display: flex;
 }
 .slideshow .swiper-container .swiper-slide img {
-  width: 40%;
+  min-width: 40%;
 }
 .slideshow .swiper-container .swiper-slide .slide-text {
   padding-left: 5%;
@@ -314,7 +325,7 @@ p {
   z-index: 50;
 }
 .section-6 .contact .contact-form:active {
-  outline: none;
+  border: none;
 }
 .section-6 .contact .contact-form ul {
   height: 40vh;
@@ -331,6 +342,8 @@ p {
   border-radius: 5px;
   padding: 5px;
   color: grey;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 .section-6 .contact .contact-form ul li:nth-of-type(3) {
   grid-area: subject;
@@ -340,7 +353,6 @@ p {
 }
 .section-6 .contact .contact-form ul li:nth-of-type(4) input {
   height: 100%;
-  text-align: start;
 }
 .section-6 .contact .contact-form ul li:nth-of-type(5) input {
   width: 50%;
@@ -352,8 +364,12 @@ p {
 }
 
 @media only screen and (max-width: 1025px) {
+  .fullpage > * {
+    height: 100vh;
+  }
+
   p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .navbar .fixed-border div {
@@ -375,11 +391,6 @@ p {
 
   .section-6 .contact .contact-information {
     padding-right: 1rem;
-  }
-}
-@media only screen and (max-width: 1025px) {
-  p {
-    font-size: 1rem;
   }
 
   .section-2 .text-area {
@@ -423,26 +434,36 @@ p {
     margin-block-end: 0;
   }
 
+  .section-5 {
+    display: flex;
+    justify-content: center;
+  }
   .section-5 .section-5-text {
     padding-right: 0;
     padding-bottom: 1rem;
   }
   .section-5 .swiper-slide {
-    flex-direction: column;
+    padding-top: 3rem;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
   }
   .section-5 .swiper-slide img {
-    height: 500px;
+    width: 60%;
   }
   .section-5 .swiper-slide .slide-text {
+    width: 40%;
     padding-left: 0;
   }
 
   .section-6 .contact {
     flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
   }
   .section-6 .contact .contact-information {
     padding-top: 2rem;
-    height: 30%;
+    height: 100%;
   }
   .section-6 .contact .contact-information .contact-grid {
     padding-right: 0;
@@ -461,6 +482,213 @@ p {
   }
   .section-6 .contact-form ul {
     padding-inline-start: 0;
+    gap: 5px 5px;
+  }
+  .section-6 .contact-form ul li {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 769px) {
+  p {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    pointer-events: none;
+  }
+  .mobile-menu .fixed-border {
+    display: flex;
+    height: 100vh;
+    margin: 0 5%;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+  }
+  .mobile-menu .fixed-border div {
+    padding: 2% 5%;
+    width: 50%;
+  }
+  .mobile-menu .fixed-border .logo {
+    margin-top: 1rem;
+    filter: brightness(0) invert(1);
+    flex: 1;
+  }
+  .mobile-menu .fixed-border .menu {
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.2rem;
+    pointer-events: visible;
+  }
+  .mobile-menu .fixed-border .menu svg {
+    cursor: pointer;
+  }
+
+  .section-1 .text-area,
+.section-2 .text-area {
+    width: 80%;
+  }
+
+  .menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    z-index: 50;
+    background: white;
+  }
+  .menu-items .list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-items .list li {
+    margin-bottom: 1.5rem;
+  }
+  .menu-items .list a {
+    text-decoration: none;
+    color: grey;
+    font-size: 1rem;
+  }
+  .menu-items svg {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    height: 30px;
+    width: 30px;
+  }
+  .menu-items .menu-btn:last-of-type {
+    background-color: var(--menu-button);
+    padding: 0.7rem 4rem;
+    border-radius: 7px;
+    color: white;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 414px) {
+  p {
+    font-size: 0.8rem;
+  }
+
+  .section-1 .text-area,
+.section-2 .text-area {
+    width: 90%;
+  }
+
+  .list {
+    padding-left: 0;
+  }
+  .list a {
+    font-size: 0.8rem;
+  }
+
+  .section-4 .mobile-hide {
+    display: none;
+  }
+  .section-4 .mobile-show {
+    display: block;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .section-4 .mobile-show h2 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+}
+@media only screen and (max-height: 411px) {
+  .section-4 .mobile-hide {
+    display: none;
+  }
+  .section-4 .mobile-show {
+    display: block;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .section-4 .mobile-show h2 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    pointer-events: none;
+  }
+  .mobile-menu .fixed-border {
+    display: flex;
+    height: 100vh;
+    margin: 0 5%;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+  }
+  .mobile-menu .fixed-border div {
+    padding: 2% 5%;
+    width: 50%;
+  }
+  .mobile-menu .fixed-border .logo {
+    margin-top: 1rem;
+    filter: brightness(0) invert(1);
+    flex: 1;
+  }
+  .mobile-menu .fixed-border .menu {
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.2rem;
+    pointer-events: visible;
+  }
+  .mobile-menu .fixed-border .menu svg {
+    cursor: pointer;
+  }
+
+  .section-3 .what-we-do .left-area {
+    padding-bottom: 3rem;
+  }
+  .section-3 .what-we-do .left-area p {
+    display: none;
+  }
+  .section-3 .what-we-do .right-area .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 0;
+  }
+  .section-3 .what-we-do .right-area span {
+    font-size: 30px !important;
   }
 }
 
